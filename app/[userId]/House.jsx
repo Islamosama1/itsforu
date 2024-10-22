@@ -731,7 +731,7 @@ export default function House({ userId }) {
     var index = 0;
     const interval = setInterval(function () {
       toast.success(messages[index], {
-        position: "top-right",
+        position: "top-center",
         duration: 2000,
       });
       index = (index + 1) % messages.length;
@@ -756,8 +756,8 @@ export default function House({ userId }) {
           <BgDiv userId={userId} />
 
           <div className="relative z-20 md:w-[50rem] w-full flex flex-col items-center h-full mx-auto">
-            <div className="flex flex-col items-center flex-1 overflow-auto p-12">
-              <div className="flex flex-col items-center flex-1 overflow-auto bg-slate-200 bg-opacity-80 rounded-3xl border-2 border-dashed border-gray-400">
+            <div className="flex flex-col items-center flex-1 p-12">
+              <div className="flex flex-col items-center flex-1 overflow-auto bg-slate-200 bg-opacity-80 rounded-3xl border-2 border-dashed border-gray-400 pt-10">
                 <ProfilePic userId={userId} />
                 <UserInfo
                   userId={userId}
